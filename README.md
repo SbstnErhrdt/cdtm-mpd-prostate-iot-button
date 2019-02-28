@@ -28,6 +28,20 @@ A patient can interact with the ecosystem easily using the web/mobile interface 
 * Sebastian
 
 # Project Description
+The last interface is the Amazon IoT button. It is a very simple approach that we followed. 
+
+We used again the Serverless framework. But this time we went with python, because it was the fastest way and the lambda function is very simple.
+
+As you can imagine we deployed this serverless application to Amazon Web Services (AWS). 
+
+Frameworks
+The following frameworks / libraries, products and repositories were used in the process and the final IoT button interface.
+
+* Python (https://www.python.org/)
+* Serverless (https://serverless.com/) 
+* IoT Button (https://aws.amazon.com/de/iotbutton/)
+* AWS Lambda (https://aws.amazon.com/de/lambda/)
+
 
 # Set-Up
 
