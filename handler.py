@@ -10,7 +10,7 @@ def hello(event, context):
 
     print(event)
 
-    r = requests.post('https://prostate.cdtm.ex-studios.net/api/1/iot/medication', json=event)
+    r = requests.post('XXX/api/1/iot/medication', json=event)
 
     response = {
         "statusCode": 200,

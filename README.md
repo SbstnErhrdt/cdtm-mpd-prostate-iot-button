@@ -26,3 +26,45 @@ A patient can interact with the ecosystem easily using the web/mobile interface 
 * Ibrar
 * Afrida
 * Sebastian
+
+# Project Description
+
+# Set-Up
+
+1. Clone the Git Repository (https://github.com/SbstnErhrdt/cdtm-mpd-prostate-iot-button). You can do that by executing the following command on your system in the Terminal / Command Line Interface
+`$ git clone https://github.com/SbstnErhrdt/cdtm-mpd-prostate-iot-button  
+
+
+2. Make sure you have installed nodejs and the node package manager. See frontend installation:
+You have to install NodeJS on your system.
+Go to the node website (https://nodejs.org/en/) and download the latest version and install it.
+By default it should also install the Node Package Manager (NPM)
+
+3. Install the necessary dependencies of the application. 
+Go to the root folder of the app and execute the following command. \
+`$ npm install`
+
+4. Adapt the handle in the handler.py file with the specific endpoint of you production backend instance. \ 
+`r = requests.post('XXX/api/1/iot/medication', json=event)`
+(line 13)
+E.g. replace `XXX with` `https://PRODUCTION.MYURL.TLD:PORT/` so that the final output looks like 
+`https://PRODUCTION.MYURL.TLD:PORT/api/1/iot/medication`
+
+5. Follow the serverless guide with regards to Amazon Web Services:
+https://serverless.com/framework/docs/providers/aws/guide/credentials/ 
+   
+6. Deploy the skill by executing \
+`$ sls deploy production` \
+You will get an URL of the endpoint. Save the url you will need it in step.
+
+7. Use the app of your AWS IoT Button and connect to the specific button
+
+8. Log in with your AWS credentials and set the endpoint to the specific lambda function you just deployed with the serverless framework.
+
+
+# Codebase
+
+This repository basically just consist out of one file. 
+
+The `handler.py` file. Within this file the request of the IoT device is just forwarded to and endpoint of the backend.	
+In the `serverless.yml the specifications to the deployment of the function can be made			 	
